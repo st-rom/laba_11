@@ -111,5 +111,4 @@ class LifeGrid:
 if __name__ == "__main__":
     lg = LifeGrid(10, 10)
     print(lg)
-    print(lg.num_live_neighbors(1, 2))
-
+    
