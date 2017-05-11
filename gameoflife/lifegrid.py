@@ -9,7 +9,8 @@ class LifeGrid:
     LIVE_CELL = 1
 
     # Neighbours
-    NEIGHBOURS = [(1, 1), (2, 1), (2, 2), (3, 6), (2, 5)]
+    NEIGHBOURS = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+#    NEIGHBOURS = [(1, 1), (2, 1), (2, 2), (3, 6), (2, 5)]
 
 
     def __init__(self, num_rows, num_cols):
@@ -110,5 +111,12 @@ class LifeGrid:
 
 if __name__ == "__main__":
     lg = LifeGrid(10, 10)
+    lg.set_cell(3, 5)
+    lg.set_cell(7, 7)
+    lg.set_cell(5, 6)
     print(lg)
-    
+    print(lg.num_live_neighbors(6, 7))
+    lg.configure([(3, 8)])
+    print(lg)
+    lg.configure([(0, 4)])
+    print(lg)
